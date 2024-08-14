@@ -1,11 +1,11 @@
 // Display.js
 import React from 'react';
 
-function Display({ value }) {
+function Display(props) {
     return (
         <div className="screen">
             <div className="display">
-                <input type="text" id="display" readOnly value={value} />
+                <input type="text" id="display" readOnly value={props.value} />
             </div>
         </div>
     );

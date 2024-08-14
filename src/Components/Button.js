@@ -1,10 +1,10 @@
 // Button.js
 import React from 'react';
 
-function Button({ onClick, id, children }) {
+function Button(props) {
     return (
-        <button onClick={onClick} id={id}>
-            {children}
+        <button onClick={props.onClick} id={props.id}>
+            {props.children}
         </button>
     );
 }

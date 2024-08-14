@@ -57,6 +57,10 @@ function App() {
         return num1 + num2;
       case 'subtract':
         return num1 - num2;
+      case 'pot':
+        return num1 ** num2;
+      case 'rest':
+        return num1 % num2;
       default:
         return num2;
     }
