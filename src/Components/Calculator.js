@@ -31,7 +31,6 @@ function Calculator(props) {
                     <Button onClick={() => props.handleButtonClick('5')} id="five">5</Button>
                     <Button onClick={() => props.handleButtonClick('6')} id="six">6</Button>
                     <Button onClick={() => props.handleOperation('add')} id="add">+</Button>
-                    <Button onClick={() => props.handleOperation('rest')} id="rest">Resto</Button>
                     <Button onClick={() => props.handleOperation('multiply')} id="multiply">×</Button>
 
                 </div>
