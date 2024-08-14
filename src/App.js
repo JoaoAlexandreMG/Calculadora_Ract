@@ -20,20 +20,23 @@ function App() {
     const parsedValue = parseNumber(displayValue);
 
     // Verifica se já há um resultado anterior e se a operação atual é a mesma da operação anterior.
-    if (resultado !== '' && operacao === operation) {
+    if (displayValue === '') {
+      setDisplayValue('-')
+    }
+    else if (resultado !== '' && operacao === operation) {
       // Se houver um resultado e a operação for a mesma, realiza a operação com o resultado anterior e o novo valor.
       setResultado(operate(resultado, parsedValue, operation));
-    } else if (resultado === '') {
+      setDisplayValue('');
+      setOperacao(operation);
+    }
+    else if (resultado === '') {
       // Se não houver resultado anterior, define o resultado atual como o novo valor convertido.
       setResultado(parsedValue);
-    }
-
-    // Limpa o display, pois o usuário irá inserir um novo valor após a operação.
-    setDisplayValue('');
-
-    // Atualiza a operação atual para a nova operação selecionada.
-    setOperacao(operation);
-  };
+      setDisplayValue('');
+      // Atualiza a operação atual para a nova operação selecionada.
+      setOperacao(operation);
+    };
+  }
 
 
   const handleEqual = () => {
